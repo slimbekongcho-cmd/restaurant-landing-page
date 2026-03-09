@@ -407,4 +407,95 @@ h1 span {
     .hamburger {
         display: block;
     }
+
 }
+/*menue section */
+
+body{
+  background-color:#000;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  margin:auto ;
+  font-family:Georgia, serif ;
+  font-size: medium;
+  
+}
+.menu-section{
+  font-size: 48px;
+  margin-bottom: 10px; 
+}
+.description{
+  font-size: 20px;
+  margin-bottom: 3px;
+  color: bisque;
+}
+.menu-section:hover{
+  transform:translateY(-10px);
+}
+.menu-section img{
+width: 100%;
+height:180px;
+object-fit:cover;
+}
+.button{
+  background-color:red;
+  color: white;
+  border: none;
+border-radius:5px ;
+padding:6px 12px;
+cursor: pointer;
+}
+.button:hover{
+  opacity:0.8;
+}
+.button:active{
+  opacity:0.5;
+}
+.price{
+  color:#6F4E37;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 15px;
+}
+.menu-item img{
+  margin-bottom: 48px ;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: row;
+}
+.name{
+  font-size: 28px;
+  font-weight: bold;
+  margin:10px 0 ;
+  color: darkgrey;
+}
+.c{
+  display: flex;
+  justify-content:center;
+  gap: 20px;
+  flex-wrap: row;
+}
+.c{
+  display: grid;
+  grid-template-columns: repeat(auto);
+  gap:20px;
+  justify-items: flex-start;
+}
+header h1{
+  font-style: oblique;
+  color: antiquewhite;
+  background-image:url(image/Drinks/Espresso.jpg);
+}
+header p{
+  color: #6F4E37;
+}
+h2{
+  color:burlywood;
+}
+
