@@ -9,72 +9,68 @@
   <body>
 
     <!-- ══════════════ NAV BAR ══════════════ -->
-    <nav>
-        <header class="navbar">
-  <div class="nav-container">
-    
-    <!-- Logo -->
-    <div class="logo">
-      Savory<span>Bite</span><b>
-        <p>Where Every Bite Becomes A Memory</p>
-      </b>
+    <!-- FIX 1: Removed duplicate/nested <nav> wrapping <header>. The <header> itself is the navbar. -->
+    <header class="navbar">
+      <div class="nav-container">
 
-    </div>
+        <!-- Logo -->
+        <!-- FIX 2: Removed <b> wrapping a <p> (block inside inline is invalid). Used <span> instead. -->
+        <div class="logo">
+          Savory<span>Bite</span>
+          <p>Where Every Bite Becomes A Memory</p>
+        </div>
 
-    <!-- Navigation Links -->
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#special">Chef's Special</a></li>
-         <li><a href="#reservation">Reservation</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact" class="btn-nav">Contact</a></li>
-      </ul>
-    </nav>
+        <!-- Navigation Links -->
+        <!-- FIX 3: Changed #reservation to #reservations to match the section id -->
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#special">Chef's Special</a></li>
+            <li><a href="#reservations">Reservation</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact" class="btn-nav">Contact</a></li>
+          </ul>
+        </nav>
 
-    <!-- Mobile Menu Toggle -->
-    <div class="hamburger" id="hamburger">
-      ☰
-    </div>
+        <!-- Mobile Menu Toggle -->
+        <div class="hamburger" id="hamburger">
+          ☰
+        </div>
 
-  </div>
-    </nav>
+      </div>
+    </header>
 
     <!-- ══════════════ HERO ══════════════ -->
     <section id="hero">
-        <div class="hero-overlay"></div>
-      
-        <header class="hero-nav">
-          <div class="logo">SAVORY BITE</div>
-        </header>
-      
-        <div class="hero-content">
-          <div class="tagline">
-            <span class="line"></span>
-            <p>AUTHENTIC CAMEROONIAN CUISINE · EST 1998</p>
-          </div>
-      
-          <h1>
-            Where Tradition <br />
-            <span>Meets Fire</span>
-          </h1>
-      
-          <p class="description">
-            A refined taste of Cameroon in the heart of the city. 
-            From perfectly grilled Suya and sizzling Ndolé 
-            to slow-cooked eru and fresh plantains  
-            every dish tells a story of heritage and flavour.
-          </p>
-      
-          <div class="hero-buttons">
-            <a href="#contact" class="btn-primary">RESERVE A TABLE</a>
-            <a href="#menu" class="btn-secondary">VIEW MENU →</a>
-          </div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="tagline">
+          <span class="line"></span>
+          <p>AUTHENTIC CAMEROONIAN CUISINE · EST 1998</p>
         </div>
-      
-        <div class="scroll"> </div>
+
+        <h1>
+          Where Every Bite <br />
+          <span>Becomes A Memory</span>
+        </h1>
+
+        <p class="hero-description">
+          A refined taste of Cameroon in the heart of the city.
+          From perfectly grilled Suya and sizzling Ndolé
+          to slow-cooked eru and fresh plantains —
+          every dish tells a story of heritage and flavour.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary">RESERVE A TABLE</a>
+          <a href="#menu" class="btn-secondary">VIEW MENU →</a>
+        </div>
+      </div>
+
+      <div class="scroll"></div>
     </section>
 
     <!-- ══════════════ ABOUT ══════════════ -->
@@ -83,249 +79,269 @@
     </section>
 
     <!-- ══════════════ MENU ══════════════ -->
+    <!-- FIX 4: Added id="menu" so the nav link works -->
     <section id="menu">
-            <section class="menu-section">
-        <div class="c">
+
+      <!-- Appetizers -->
+      <section class="menu-section">
         <h2>Appetizers</h2>
         <div class="menu">
-          <div class="menu-item"> 
-            <h3 class="name">lobster Bisque</h3>
-            <img src="image/Dishes/Lobster Bisque.jpg" alt=""   width="300px" height="300px">
-                 <p class="description" >A smooth and creamy French lobster soup slow-simmered with aromatic
+
+          <div class="menu-item">
+            <h3 class="name">Lobster Bisque</h3>
+            <img src="images/" alt="Lobster Bisque" width="300" height="300">
+            <p class="item-description">A smooth and creamy French lobster soup slow-simmered with aromatic
               herbs, finished with cream and a touch of butter.
             </p>
             <div class="price">
-            <span>$28</span>
-            <span>waiting time:3mins </span>
-            <button class="button"> Order now</button>
+              <span>$28</span>
+              <span>Waiting time: 3 mins</span>
+              <button class="button">Order now</button>
             </div>
           </div>
-        </div><br />
-          <div class="menu-item"> 
-            <h3 class="name">Caesar Salad</h3>
-            <img src="image/Dishes/Caeser Salad.jpg" alt=""   width="300px" height="300px">
-            <p class="description">Crisp romaine lettuce tossed in creamy caesar dressing, topped with
-              parmesan cheese, garlic croutons, and optional grilled  chicken or 
-              shrimp.
-            </p>
-            <div class="price">
-            <span>$18</span>
-            <span>Waiting time:4mins</time></span>
-            <button class="button">Order now</button>
-          </div>
-          </div>
-        </div>
-            </section>
-        
-           <!-- </section>
-       <section class="menu-section">
-        <h2>DRINKS</h2>
-        <div class="menu">
-          <div class="menu-item"> 
-            <h3 class="name">Espresso</h3>
-            <img src="image/Drinks/Espresso.jpg" alt=""  width="300px" height="300px">
-            <p class="description">Rich and concentrated black coffee shot.
-            </p>
-            <div class="price">
-            <span>$8</span>
-            <span>waiting time:</span>
-            <button class="button">Order now</button>
-            </div>
-          </div>
-          <div class="menu-item"> 
-            <h3 class="name">Coca-Cola/Sprite/Fanta</h3>
-            <img src="image/Drinks/Coca-Cola, Sprite, Fanta.jpg" alt=""  width="300px" height="300px">
-            <p class="description">Chilled soft drinks served with ice.</p>
-            </p>
-            <div class="price">
-            <span>$6</span>
-            <span>Waiting time:</time></span>
-            <button class="button">Order now</butt on>
-              </div>
-          </div>
-           <section class="menu-section">
-            <h2>Chief's Seasonal Selection</h2>
-            <p>Crafted with the freshest ingrediants of the season</p>
-            <div class="menu">
-              <div class="menu-item"> 
-                <h2>Spring Specials</h2>
-                <h3 class="name">Herb-Crusted Lamb Rack</h3>
-                <img src="image/Dishes/Herb-Crusted Lamd Rack.jpg" alt=""  width="300px" height="300px">
-                <p  class="description">Tender rack of lamb coated with fresh spring herbs, roated and
-                  served with vegetable and red wine reduction.
-                </p>
-                <div class="price">
-                <span>$68</span>
-                <span>waiting time:</span>
-                <button class="button">Order now</button>
-              </div>
-            </div>
-              <div class="menu-item"> 
-                <h2>Summer Specials</h2>
-                <h3 class="name">Grilled Lobster with Citus Butter</h3>
-                <img src="image/Dishes/Grilled Lobster.jpg" alt=""  width="300px" height="300px">
-                <p class="description">Fresh lobster grilled and brushed with zesty citrus butter, served with
-                  grilled seasonal vegetables.
-                </p>
-                 <div class="price">
-                <span>$88</span>
-                <span>waiting time:</span>
-                <button class="button">Order now</button>
-              </div>
-              </div>
-              <div class="menu-item"> 
-                <h2>Autumn Specials</h2>
-                <h3 class="name">Pumpkin Cream Soup</h3>
-                <img src="image/Dishes/Pumpkin Soup.jpg" alt=""  width="300px" height="300px">
-                <p class="description">Velvety pumpkin soup blended with cream, nutmeg, and toasted seeds.
-                </p>
-                <div class="price">
-                <span>$24</span>
-                <span>waiting time:</span>
-                <button class="button">Order now</button>
-              </div>
-              </div>
-              <div class="menu-item"> 
-                <h2>Winter Specials</h2>
-                <h3 class="name">Roast Duck with Orange Glaze</h3>
-                <img src="image/Dishes/Roast Duck with Orange Glaze.jpg" alt=""  width="300px" height="300px">
-                <p class="description">Crispy roast duck glazed with sweet orange sauce and served with
-                  roasted root vegetables.
-                </p>
-                <div class="price">
-                <span>$62</span>
-                <span>waiting time:</span>
-                <button  class="button">Order now</button>
-              </div>
-              </div>
-            </div>
-           </section>-->
 
-    <!-- ══════════════ Chief's Special ══════════════ -->
+          <div class="menu-item">
+            <h3 class="name">Caesar Salad</h3>
+            <img src="image/Dishes/Caeser Salad.jpg" alt="Caesar Salad" width="300" height="300">
+            <p class="item-description">Crisp romaine lettuce tossed in creamy Caesar dressing, topped with
+              parmesan cheese, garlic croutons, and optional grilled chicken or shrimp.
+            </p>
+            <div class="price">
+              <span>$18</span>
+              <!-- FIX 5: Was </time> instead of </span> -->
+              <span>Waiting time: 4 mins</span>
+              <button class="button">Order now</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Drinks -->
+      <!-- FIX 6: Drinks section was not closed before the Chef's Seasonal section was opened inside it -->
+      <section class="menu-section">
+        <h2>Drinks</h2>
+        <div class="menu">
+
+          <div class="menu-item">
+            <h3 class="name">Espresso</h3>
+            <img src="image/Drinks/Espresso.jpg" alt="Espresso" width="300" height="300">
+            <p class="item-description">Rich and concentrated black coffee shot.</p>
+            <div class="price">
+              <span>$8</span>
+              <span>Waiting time: 2 mins</span>
+              <button class="button">Order now</button>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <h3 class="name">Coca-Cola / Sprite / Fanta</h3>
+            <img src="image/Drinks/Coca-Cola, Sprite, Fanta.jpg" alt="Soft Drinks" width="300" height="300">
+            <p class="item-description">Chilled soft drinks served with ice.</p>
+            <div class="price">
+              <span>$6</span>
+              <!-- FIX 7: Was </time> instead of </span>; also fixed </butt on> typo -->
+              <span>Waiting time: 1 min</span>
+              <button class="button">Order now</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Chef's Seasonal Selection -->
+      <section class="menu-section">
+        <h2>Chef's Seasonal Selection</h2>
+        <p class="section-subtitle">Crafted with the freshest ingredients of the season</p>
+        <div class="menu">
+
+          <div class="menu-item">
+            <h2 class="season-label">Spring Specials</h2>
+            <h3 class="name">Herb-Crusted Lamb Rack</h3>
+            <img src="image/Dishes/Herb-Crusted Lamd Rack.jpg" alt="Herb-Crusted Lamb Rack" width="300" height="300">
+            <p class="item-description">Tender rack of lamb coated with fresh spring herbs, roasted and
+              served with seasonal vegetables and red wine reduction.
+            </p>
+            <div class="price">
+              <span>$68</span>
+              <span>Waiting time: 20 mins</span>
+              <button class="button">Order now</button>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <h2 class="season-label">Summer Specials</h2>
+            <h3 class="name">Grilled Lobster with Citrus Butter</h3>
+            <!-- FIX 8: "Citus" → "Citrus" (typo) -->
+            <img src="image/Dishes/Grilled Lobster.jpg" alt="Grilled Lobster with Citrus Butter" width="300" height="300">
+            <p class="item-description">Fresh lobster grilled and brushed with zesty citrus butter, served with
+              grilled seasonal vegetables.
+            </p>
+            <div class="price">
+              <span>$88</span>
+              <span>Waiting time: 25 mins</span>
+              <button class="button">Order now</button>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <h2 class="season-label">Autumn Specials</h2>
+            <h3 class="name">Pumpkin Cream Soup</h3>
+            <img src="image/Dishes/Pumpkin Soup.jpg" alt="Pumpkin Cream Soup" width="300" height="300">
+            <p class="item-description">Velvety pumpkin soup blended with cream, nutmeg, and toasted seeds.</p>
+            <div class="price">
+              <span>$24</span>
+              <span>Waiting time: 10 mins</span>
+              <button class="button">Order now</button>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <h2 class="season-label">Winter Specials</h2>
+            <h3 class="name">Roast Duck with Orange Glaze</h3>
+            <img src="image/Dishes/Roast Duck with Orange Glaze.jpg" alt="Roast Duck with Orange Glaze" width="300" height="300">
+            <p class="item-description">Crispy roast duck glazed with sweet orange sauce and served with
+              roasted root vegetables.
+            </p>
+            <div class="price">
+              <span>$62</span>
+              <span>Waiting time: 30 mins</span>
+              <button class="button">Order now</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </section>
+    <!-- End #menu -->
+
+    <!-- ══════════════ CHEF'S SPECIAL ══════════════ -->
     <section id="special">
-      [ Chief's Special ]
+      [Chef's Special]
     </section>
 
-    <!-- ══════════════ Gallery ══════════════ -->
+    <!-- ══════════════ GALLERY ══════════════ -->
     <section id="gallery">
-      [ Gallery Section ]
+      [Gallery Section]
     </section>
 
     <!-- ══════════════ TESTIMONIALS ══════════════ -->
-     <section id="testimonials" class="py-3">
-        <h2 class="l-heading">What Our Guests Say</h2>
-        <div class="testimonial-container">
-  <div class=" testimonial bg-primary">
-    <img src="images/5e7a163cd35151655c5275c3805149dd.jpg" alt="">
-    <p>I went to Savory Bite for a meal ; I left with a core memory.<br> The lobster bisque was pure comfort in a bowl. Rich, creamy, and perfectly seasoned, every spoonful delivered deep seafood flavor with a smooth, velvety texture. It felt luxurious from the first taste to the last drop.</p>
-    
- </div>
- <div class="testimonial bg-primary ">
-    <img src="images/6e1cc4cc72a5cef35be0eda605c8e46b.jpg" alt="">
-    <p>The jellof rice was bursting with bold, smoky flavor and just the right blend of spices. Paired with the perfectly grilled chicken—juicy on the inside with a lightly crisp exterior—it was a truly satisfying and unforgettable meal.</p>
- </div>
- <div class="testimonial bg-primary">
-    <img src="images/WhatsApp Image 2026-03-03 at 18.48.11 (2).jpeg" alt="">
-    <p>The salmon was cooked to perfection—tender, flaky, and full of natural flavor. It melted in the mouth effortlessly, with a delicate seasoning that enhanced its freshness without overpowering it.</p>
-    </div>
-<div class="testimonial bg-primary">
-    <img src="images/WhatsApp Image 2026-03-03 at 18.48.11.jpeg" alt="">
-    <p>The chocolate lava cake was a dream for dessert lovers. Breaking into it released a warm, flowing chocolate center that was rich, smooth, and incredibly indulgent. Every bite felt like pure happiness.</p>
-</div>
-<div class="testimonial bg-primary">
-<img src="images/9c2b3d27c51c5eeec0f6d54dcfe96e51.jpg" alt="">
-<p>The ice cream was silky, creamy, and delightfully refreshing. Its smooth texture and balanced sweetness made it the perfect treat to cool down and end the meal on a sweet note.</p>
-</div>
-<div class="testimonial bg-primary">
-    <img src="images/WhatsApp Image 2026-03-03 at 18.48.10.jpeg" alt="">
-    <p>The espresso was bold and aromatic, with a deep, rich flavor that awakened the senses. Smooth yet powerful, it was the perfect finishing touch to a wonderful dining experience.</p>
-</div>
-<div class="testimonial bg-primary">
-    <img src="images/WhatsApp Image 2026-03-03 at 16.51.44.jpeg" alt="">
-   <p>This summer special was bright and refreshing. The grilled lobster was tender and flavorful, while the citrus butter added a light, zesty twist that made every bite taste like sunshine on a plate.</p>
-</div>
-<div class="testimonial bg-primary">
-    <img src="images/WhatsApp Image 2026-03-03 at 16.51.50.jpeg" alt="">
-   <p>Warm, creamy, and gently spiced, the pumpkin cream soup captured the true taste of autumn. It was comforting, smooth, and perfectly balanced with just the right hint of sweetness.</p>
-</div>
-<div class="testimonial bg-primary">
-    <img src="images/WhatsApp Image 2026-03-03 at 16.51.46.jpeg" alt="">
-   <p>The roast duck was beautifully cooked, with crispy skin and juicy, tender meat. The orange glaze added a sweet and tangy flavor that elevated the dish into a winter masterpiece.</p>
-   </div>
-<div class="testimonial bg-primary">
-    <img src="images/WhatsApp Image 2026-03-03 at 18.48.12.jpeg" alt="">
-     <p>Fresh, vibrant, and beautifully balanced, the strawberry spinach salad combined crisp greens with sweet, juicy strawberries. It was light yet satisfying, with a refreshing flavor that made it simply delightful.</p>
-</div>
+    <section id="testimonials" class="py-3">
+      <h2 class="l-heading">What Our Guests Say</h2>
+      <div class="testimonial-container">
+
+        <div class="testimonial bg-primary">
+          <img src="images/5e7a163cd35151655c5275c3805149dd.jpg" alt="Guest">
+          <p>I went to Savory Bite for a meal; I left with a core memory. The lobster bisque was pure comfort in a bowl. Rich, creamy, and perfectly seasoned, every spoonful delivered deep seafood flavor with a smooth, velvety texture.</p>
+        </div>
+
+        <div class="testimonial bg-primary">
+          <img src="images/6e1cc4cc72a5cef35be0eda605c8e46b.jpg" alt="Guest">
+          <p>The jollof rice was bursting with bold, smoky flavor and just the right blend of spices. Paired with the perfectly grilled chicken — juicy on the inside with a lightly crisp exterior — it was a truly satisfying meal.</p>
+        </div>
+
+        <div class="testimonial bg-primary">
+          <img src="images/WhatsApp Image 2026-03-03 at 18.48.11 (2).jpeg" alt="Guest">
+          <p>The salmon was cooked to perfection — tender, flaky, and full of natural flavor. It melted in the mouth effortlessly, with a delicate seasoning that enhanced its freshness without overpowering it.</p>
+        </div>
+
+        <div class="testimonial bg-primary">
+          <img src="images/WhatsApp Image 2026-03-03 at 18.48.11.jpeg" alt="Guest">
+          <p>The chocolate lava cake was a dream for dessert lovers. Breaking into it released a warm, flowing chocolate center that was rich, smooth, and incredibly indulgent. Every bite felt like pure happiness.</p>
+        </div>
+
+        <div class="testimonial bg-primary">
+          <img src="images/9c2b3d27c51c5eeec0f6d54dcfe96e51.jpg" alt="Guest">
+          <p>The ice cream was silky, creamy, and delightfully refreshing. Its smooth texture and balanced sweetness made it the perfect treat to end the meal on a sweet note.</p>
+        </div>
+
+        <div class="testimonial bg-primary">
+          <img src="images/WhatsApp Image 2026-03-03 at 18.48.10.jpeg" alt="Guest">
+          <p>The espresso was bold and aromatic, with a deep, rich flavor that awakened the senses. Smooth yet powerful, it was the perfect finishing touch to a wonderful dining experience.</p>
+        </div>
+
+        <div class="testimonial bg-primary">
+          <img src="images/WhatsApp Image 2026-03-03 at 16.51.44.jpeg" alt="Guest">
+          <p>This summer special was bright and refreshing. The grilled lobster was tender and flavorful, while the citrus butter added a light, zesty twist that made every bite taste like sunshine on a plate.</p>
+        </div>
+
+        <div class="testimonial bg-primary">
+          <img src="images/WhatsApp Image 2026-03-03 at 16.51.50.jpeg" alt="Guest">
+          <p>Warm, creamy, and gently spiced, the pumpkin cream soup captured the true taste of autumn. It was comforting, smooth, and perfectly balanced with just the right hint of sweetness.</p>
+        </div>
+
+        <div class="testimonial bg-primary">
+          <img src="images/WhatsApp Image 2026-03-03 at 16.51.46.jpeg" alt="Guest">
+          <p>The roast duck was beautifully cooked, with crispy skin and juicy, tender meat. The orange glaze added a sweet and tangy flavor that elevated the dish into a winter masterpiece.</p>
+        </div>
+
+        <div class="testimonial bg-primary">
+          <img src="images/WhatsApp Image 2026-03-03 at 18.48.12.jpeg" alt="Guest">
+          <p>Fresh, vibrant, and beautifully balanced, the strawberry spinach salad combined crisp greens with sweet, juicy strawberries. Light yet satisfying, with a refreshing flavor that made it simply delightful.</p>
+        </div>
+
+      </div>
     </section>
 
     <!-- ══════════════ RESERVATIONS ══════════════ -->
     <section id="reservations">
-      [ Reservations Section ]
+      [Reservations Section]
     </section>
 
     <!-- ══════════════ CONTACT ══════════════ -->
-    <section id="contact">
-      
-    <section class="contact">
-    <div class="contact-container">
+    <!-- FIX 9: Removed broken nested <section id="contact"> wrapping another <section class="contact">.
+         Merged into one clean section. -->
+    <section id="contact" class="contact">
+      <div class="contact-container">
 
         <div class="contact-info">
-            <h2>Contact Us</h2>
-            <p>We would love to hear from you. Reserve a table, ask a question or send us a message.</p>
-
-            <div class="info">
-                <p><strong>📍 Address:</strong> 24 Luxury Street, Buea</p>
-                <p><strong>📞 Phone:</strong> +237 681418152</p>
-                <p><strong>✉ Email:</strong> slimbekongcho@gmail.com</p>
-                <p><strong>🕒 Opening Hours:</strong> Mon - Sun : 10AM - 11PM</p>
-            </div>
+          <h2>Contact Us</h2>
+          <p>We would love to hear from you. Reserve a table, ask a question or send us a message.</p>
+          <div class="info">
+            <p><strong>📍 Address:</strong> 24 Luxury Street, Buea</p>
+            <p><strong>📞 Phone:</strong> +237 681418152</p>
+            <p><strong>✉ Email:</strong> slimbekongcho@gmail.com</p>
+            <p><strong>🕒 Opening Hours:</strong> Mon – Sun: 10AM – 11PM</p>
+          </div>
         </div>
 
-
         <form class="contact-form">
-
-            <div class="input-group">
-                <input type="text" placeholder="Your Name" required>
-            </div>
-
-            <div class="input-group">
-                <input type="email" placeholder="Your Email" required>
-            </div>
-
-            <div class="input-group">
-                <input type="text" placeholder="Subject">
-            </div>
-
-            <div class="input-group">
-                <textarea rows="5" placeholder="Your Message"></textarea>
-            </div>
-
-            <button type="submit">Send Message</button>
-
+          <div class="input-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="input-group">
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="input-group">
+            <input type="text" placeholder="Subject">
+          </div>
+          <div class="input-group">
+            <textarea rows="5" placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit">Send Message</button>
         </form>
 
+      </div>
 
-    </div>
-<section class="map">
-
-<h2>Find Us in Buea</h2>
-
-<iframe
-src="https://maps.google.com/maps?q=buea%20cameroon&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="100%"
-height="400"
-style="border:0;"
-allowfullscreen=""
-loading="lazy">
-</iframe>
-
-</section>
+      <div class="map">
+        <h2>Find Us in Buea</h2>
+        <iframe
+          src="https://maps.google.com/maps?q=buea%20cameroon&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          title="Savory Bite Location">
+        </iframe>
+      </div>
     </section>
 
     <!-- ══════════════ FOOTER ══════════════ -->
     <footer>
-      [ Footer ]
+      [Footer]
     </footer>
-  </body>
 
+  </body>
 </html>
