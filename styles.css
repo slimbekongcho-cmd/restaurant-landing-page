@@ -143,6 +143,8 @@
   color: #fff;
   font-family: 'Inter', sans-serif;
   overflow: hidden;
+  margin-top: 50px;
+  
 }
 
 /* Dark overlay */
@@ -411,13 +413,12 @@ h1 span {
 }
 /*menue section */
 
-body{
+.c{
   background-color:#000;
   color: #fff;
   padding: 40px 20px;
   text-align: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 300px;
@@ -426,10 +427,10 @@ body{
   font-size: medium;
   
 }
-.menu-section{
+/*.menu-section{
   font-size: 48px;
   margin-bottom: 10px; 
-}
+}*/
 .description{
   font-size: 20px;
   margin-bottom: 3px;
