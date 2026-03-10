@@ -233,7 +233,65 @@
 
     <!-- ══════════════ GALLERY ══════════════ -->
     <section id="gallery">
-      [Gallery Section]
+      <h1>OUR   GALLERY   MENU</h1>
+<!-- First visible images -->
+ <div class="gallery-container">
+ <div class="gallery-column">
+
+<div class="gallery-item">
+    <div class="column" style="margin-bottom: 20px;">
+    <img src="WhatsApp Image 2026-03-04 at 6.28.43 PM.jpeg" style="margin-bottom: 20px;">
+    <img src="WhatsApp Image 2026-03-04 at 6.28.44 PM (1).jpeg" style="margin-bottom: 20px;" >
+    <img src="WhatsApp Image 2026-03-04 at 6.28.44 PM (3).jpeg" style="margin-bottom: 20px;">
+    <img src="WhatsApp Image 2026-03-04 at 6.28.44 PM (4).jpeg" style="margin-bottom: 20px;">
+    <img src="WhatsApp Image 2026-03-04 at 6.28.44 PM.jpeg" style="margin-bottom: 20px;">
+    <img src="WhatsApp Image 2026-03-04 at 6.28.44 PM (2).jpeg" style="margin-bottom: 20px;">
+<!-- Hidden images -->
+ <div class="gallery-container">
+<div class="more-container" id="moreImages">
+    <div class="gallery-column">
+    <div class="gallery-item">
+        <div class="column" ssstyle="margin-bottom: 20px;">
+        <img src="WhatsApp Image 2026-03-04 at 6.28.46 PM (3).jpeg" style="margin-bottom: 10px;">
+        <img src="IMG-20260308-WA0114.jpg" style="margin-bottom: 20px;"style="margin-bottom: 10px;">
+        <img src="IMG-20260308-WA0112.jpg" style="margin-bottom: 20px;"style="margin-bottom: 10px;">
+        <img src="WhatsApp Image 2026-03-04 at 6.28.45 PM.jpeg"style="margin-bottom: 10px;"> 
+        <img src="WhatsApp Image 2026-03-04 at 6.28.43 PM.jpeg" style="margin-bottom: 10px;">
+        <img src="WhatsApp Image 2026-03-04 at 6.28.47 PM (1).jpeg" style="margin-bottom: 10px;">
+        <img src="WhatsApp Image 2026-03-04 at 6.28.47 PM (2).jpeg" style="margin-bottom: 10px;">
+        <img src="WhatsApp Image 2026-03-04 at 6.28.48 PM (1).jpeg" style="margin-bottom: 10px;">
+        
+        <img src="WhatsApp Image 2026-03-04 at 6.28.47 PM.jpeg"style="margin-bottom: 10px;">
+        <img src="bacon-wrapped-stuffed-dates-recipe-10-jpg-65aebfcccad46.jpeg"style="margin-bottom: 10px;">
+        <img src="WhatsApp Image 2026-03-09 at 7.53.32 PM (1).jpeg"style="margin-bottom: 10px;">
+        <img src="WhatsApp Image 2026-03-09 at 7.53.32 PM (3).jpeg"style="margin-bottom: 10px;">
+        <img src="WhatsApp Image 2026-03-09 at 7.53.32 PM.jpeg"style="margin-bottom: 10px;">
+        <img src="IMG-20260308-WA0115.jpg"style="margin-bottom: 10px;">
+        <img src="WhatsApp Image 2026-03-09 at 7.53.32 PM (2).jpeg"style="margin-bottom: 10px;">
+        <img src="WhatsApp Image 2026-03-09 at 7.53.32 PM (3).jpeg"style="margin-bottom: 10px;">
+        <img src="IMG-20260308-WA0113.jpg"style="margin-bottom: 10px;">
+        <img src="WhatsApp Image 2026-03-04 at 6.28.46 PM (2).jpeg"style="margin-bottom: 10px;">
+    </div>
+    </div>
+ </div>
+</div>
+<div class="button">
+<button onclick="toggleImages()" id="btn">See More</button>
+</div>
+<script>
+function toggleImages() {
+    var more = document.getElementById("moreImages");
+    var btn = document.getElementById("btn");
+
+    more.classList.toggle("show");
+
+    if (more.classList.contains("show")) {
+        btn.innerText = "See Less";
+    } else {
+        btn.innerText = "See More";
+    }
+}
+</script>
     </section>
 
     <!-- ══════════════ TESTIMONIALS ══════════════ -->
