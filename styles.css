@@ -598,7 +598,7 @@ h1 span {
         }
 
         .more-container.show {
-            max-height: 3000px;
+            max-height: 30000px;
         }   
         button {
             padding: 12px 25px;
